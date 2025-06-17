@@ -2,7 +2,7 @@ import Node from "./Nodes"
 
 class LinkedList {
     constructor() {
-        this.list = []
+        this.list = null;
     }
 
     append(value) {
