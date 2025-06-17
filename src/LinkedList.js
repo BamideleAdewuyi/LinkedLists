@@ -21,12 +21,13 @@ class LinkedList {
         
         last.nextNode = newNode;
         return;
-
-
     };
 
     prepend(value) {
-
+        const newNode = new Node(value);
+        newNode.nextNode = this.list;
+        this.list = newNode;
+        return;
     };
 
     size() {
