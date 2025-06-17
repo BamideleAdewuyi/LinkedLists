@@ -1,4 +1,4 @@
-import Node from "./Nodes"
+import Node from "./Nodes.js"
 
 class LinkedList {
     constructor() {
@@ -6,7 +6,9 @@ class LinkedList {
     }
 
     append(value) {
-
+        if (this.list === null) {
+            this.list = [new Node(value)]
+        }
     };
 
     prepend(value) {
