@@ -145,6 +145,14 @@ class LinkedList {
 
         return values.join(" -> ")
     };
+
+    insertAt(value, index) {
+
+    };
+
+    removeAt(index) {
+
+    };
 }
 
 export default LinkedList;
