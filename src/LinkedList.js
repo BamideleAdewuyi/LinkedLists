@@ -8,7 +8,6 @@ class LinkedList {
     append(value) {
         const newNode = new Node(value);
 
-        
         if (this.list === null) {
             this.list = newNode;
             return;
@@ -31,7 +30,19 @@ class LinkedList {
     };
 
     size() {
+        if (this.list === null) {
+            return 0;
+        }
 
+        let total = 1;
+        let last = this.list;
+
+        while (last.nextNode != null) {
+            total++;
+            last = last.nextNode;
+        }
+
+        return total;
     };
 
     head() {
