@@ -112,7 +112,19 @@ class LinkedList {
     };
 
     find(value) {
+        if (!this.contains(value)) {
+            return null;
+        }
 
+        let index = 0;
+        let last = this.list;
+
+        while (last.value != value) {
+            index++;
+            last = last.nextNode;
+        }
+
+        return index;
     }
 
     toString() {
