@@ -93,7 +93,22 @@ class LinkedList {
     };
 
     contains(value) {
+        if (this.list === null) {
+            return false;
+        }
+        
+        let last = this.list;
+        let result = false;
 
+        while (last != null) {
+            if (last.value === value) {
+                result = true;
+                return result
+            }
+            last = last.nextNode;
+        }
+
+        return result;
     };
 
     find(value) {
