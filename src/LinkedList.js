@@ -64,7 +64,7 @@ class LinkedList {
     };
 
     at(index) {
-        if (this.list === null || index > this.size()) {
+        if (this.list === null || index >= this.size()) {
             return null;
         };
 
