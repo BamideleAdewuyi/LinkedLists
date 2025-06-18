@@ -147,7 +147,30 @@ class LinkedList {
     };
 
     insertAt(value, index) {
+        const newNode = new Node(value);
 
+        if (this.list === null) {
+            this.list = newNode;
+            return;
+        };
+
+        if (index === 0) {
+            this.prepend(value);
+            return;
+        }
+
+        if (index > this.size() - 1) {
+            this.append(value);
+            return;
+        }
+
+        const oldNode = this.at(index)
+
+        const breakNode = this.at(index - 1)
+
+        newNode.nextNode = oldNode;
+
+        breakNode.nextNode = newNode;
     };
 
     removeAt(index) {
