@@ -46,7 +46,7 @@ class LinkedList {
     };
 
     head() {
-
+        return this.list;
     };
 
     tail() {
