@@ -50,7 +50,17 @@ class LinkedList {
     };
 
     tail() {
+        if (this.list === null) {
+            return null;
+        }
 
+        let last = this.list;
+
+        while (last.nextNode != null) {
+            last = last.nextNode;
+        }
+
+        return last;
     };
 
     at(index) {
