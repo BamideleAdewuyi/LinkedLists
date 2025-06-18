@@ -174,7 +174,24 @@ class LinkedList {
     };
 
     removeAt(index) {
+        if (this.list === null) {
+            return;
+        };
 
+        if (index > this.size() - 1) {
+            return;
+        };
+
+        if (index === 0) {
+            this.list = this.at(1);
+            return;
+        }
+
+        let preIndexNode = this.at(index - 1);
+        let postIndexNode = this.at(index + 1);
+
+        preIndexNode.nextNode = postIndexNode;
+        return;
     };
 }
 
