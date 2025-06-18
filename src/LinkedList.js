@@ -128,7 +128,22 @@ class LinkedList {
     }
 
     toString() {
+        if (this.list === null) {
+            return null;
+        }
 
+        let values = [];
+
+        let last = this.list;
+
+        while (last.nextNode != undefined) {
+            values.push(`( ${last.value} )`);
+            last = last.nextNode;
+        }
+
+        values.push(`( ${null} )`);
+
+        return values.join(" -> ")
     };
 }
 
