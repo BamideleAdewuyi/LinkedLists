@@ -136,7 +136,7 @@ class LinkedList {
 
         let last = this.list;
 
-        while (last.nextNode != undefined) {
+        while (last != null) {
             values.push(`( ${last.value} )`);
             last = last.nextNode;
         }
