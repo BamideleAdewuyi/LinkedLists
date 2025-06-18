@@ -80,7 +80,16 @@ class LinkedList {
     };
 
     pop() {
-
+        if (this.list === null) {
+            return;
+        };
+        
+        if (this.size() === 1) {
+            this.list = null;
+            return;
+        };
+        
+        this.at(this.size() - 2).nextNode = null;
     };
 
     contains(value) {
