@@ -64,7 +64,19 @@ class LinkedList {
     };
 
     at(index) {
+        if (this.list === null || index > this.size()) {
+            return null;
+        };
 
+        let selected = this.list;
+        let count = 0;
+
+        while (count != index) {
+            count++;
+            selected = selected.nextNode;
+        }
+
+        return selected;
     };
 
     pop() {
